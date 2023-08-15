@@ -1,0 +1,1 @@
+# Average_Salary_SMPC
