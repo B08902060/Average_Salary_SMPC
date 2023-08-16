@@ -12,6 +12,10 @@ finish = int(sys.argv[2])
 ip = sys.argv[3]
 port_num = int(sys.argv[4])
 
+if(len(sys.argv)!=5):
+    raise Exception('invalid arguments\nUsage:python3 ./PATH/average_salary.py <n_parties> <finish> <ip> <port number>')
+
+
 client_id = int(input("Please enter your ID:"))
 salary = float(input("Please enter your salary:"))
 gender = int(input("\n1.Male 2.Female 3.Other \nPlease choose your gender:"))
