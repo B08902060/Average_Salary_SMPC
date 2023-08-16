@@ -16,7 +16,7 @@ Clone a copy of the main git repository of MP-SPDZ
 ```
 ### Step 3. Cope Files
 ```
-  cp Average_Salary_SMPC/Programs/Source/average_gender_salary.mpc MP-SPDZ/Programs/Source/
+  cp Average_Salary_SMPC/Programs/Source/average_gender_salary.mpc MP-SPDZ/Programs/Source
 ``` 
 ### Step 4. 
 ```
