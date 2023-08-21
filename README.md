@@ -37,13 +37,14 @@ pip install gmpy2
 ```
 git clone https://github.com/B08902060/Average_Salary_SMPC
 ```
-### Step 3. Cope Files
+### Step 3. Set Certificate
 ```
-cp Average_Salary_SMPC/ExternalIO/average_salary.py MP-SPDZ/ExternalIO/
+mkdir Player-Data
+cd Player-Data/
+===寫入接收的SSL證書===
+cd ../
 ``` 
-### Step 4. 
+### Step 4. Run Protocol
 ```
-===接收SSL證書===
-cd MP-SPDZ/
 python3 ./PATH/average_salary.py <n_parties> <finish> <party_0_port number> <ip_party_0> <ip_party_1> ... <ip_party_(n-1)> 
 ``` 
