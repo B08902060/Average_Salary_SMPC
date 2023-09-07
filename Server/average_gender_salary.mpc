@@ -2,9 +2,9 @@ from Compiler.types import sint, regint, Array, MemValue
 from Compiler.library import print_ln, do_while, for_range
 from Compiler.util import if_else
 
-PORTNUM = 14000         //Computation_Node_0 的 Port number（其餘Node_i依序為14000+i） 
-MAX_NUM_CLIENTS = 8     //資料提供者數量上限（可調整）
-n_rounds = 1            //平均薪資調查輪數
+PORTNUM = 14000         # Computation_Node_0 的 Port number（其餘Node_i依序為14000+i） 
+MAX_NUM_CLIENTS = 8     # 資料提供者數量上限（可調整）
+n_rounds = 1            # 平均薪資調查輪數
 
 if len(program.args) > 1:
     n_rounds = int(program.args[1])
@@ -28,17 +28,17 @@ def client_input(t, client_socket_id):
 
 
 def average_gender_salary(number_clients, client_values, client_genders):
-    sum = Array(3, client_values.value_type)        //各性別提供薪資之總和
+    sum = Array(3, client_values.value_type)        # 各性別提供薪資之總和
     sum.assign_all(0)
 
-    num_of_gender = sint.Array(3)                   //各性別參與調查之人數
+    num_of_gender = sint.Array(3)                   # 各性別參與調查之人數
     num_of_gender.assign_all(0)
     
     @for_range(number_clients)
     def loop_body(i):
-        gender_type1 = (client_genders[i] == 1)     // Male
-        gender_type2 = (client_genders[i] == 2)     // Female
-        gender_type3 = (client_genders[i] == 3)     // Other
+        gender_type1 = (client_genders[i] == 1)     # Male
+        gender_type2 = (client_genders[i] == 2)     # Female
+        gender_type3 = (client_genders[i] == 3)     # Other
         sum[0] = gender_type1.if_else(sum[0]+client_values[i],sum[0])        
         sum[1] = gender_type2.if_else(sum[1]+client_values[i],sum[1])        
         sum[2] = gender_type3.if_else(sum[2]+client_values[i],sum[2])        
@@ -46,7 +46,7 @@ def average_gender_salary(number_clients, client_values, client_genders):
         num_of_gender[1] = gender_type2.if_else(num_of_gender[1]+1,num_of_gender[1])
         num_of_gender[2] = gender_type3.if_else(num_of_gender[2]+1,num_of_gender[2])
     
-    average = sfix.Array(3)                         //各性別提供薪資之平均值
+    average = sfix.Array(3)                         #各性別提供薪資之平均值
     @for_range(3)
     def _(i):
         div = (num_of_gender[i] == 0)
