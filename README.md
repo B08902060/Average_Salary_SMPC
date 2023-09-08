@@ -22,15 +22,22 @@ Therefore, the goal is to pursue gender pay equality while safeguarding individu
 
 <p class="text-center">▲ 圖SMPC-2、安全多方運算擬真情境架構圖</p>
 ## Dataset
+We will generate randomly simulated salary data with the following data fields:
 
-:::info
-請昱維將 [擬真情境 HackMD](https://hackmd.io/tsCygT4XQsyNxlqZlsSgEQ) 的「情境使用資料說明」譯成英文，並參考架構填充至此。
+1.  Gender: Records the gender of employees, with three options: male, female, and other.
+2.  Salary （NTD/Month）: Represents the monthly salary of each employee, measured in New Taiwan Dollars (NTD).
 
-+ 以一個段落介紹資料集之來源、內容、用途
-+ 以列點說明各欄位之意義
-+ 提供 資料集內容示意圖
+|ID | Gender     | Salary（NTD/Month） | 
+|:--------: | :--------: | :--------: |
+|1| Female | 1123701  | 
 
-:::
+|ID | Gender     | Salary（NTD/Month） | 
+|:--------: | :--------: | :--------: |
+|2| Male | 23222  | 
+
+|ID | Gender     | Salary（NTD/Month） | 
+|:--------: | :--------: | :--------: |
+|3| Other | 321111  | 
 
 ## Used PETs
 
