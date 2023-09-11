@@ -129,7 +129,7 @@ Step 2: Install `gmpy2`
 ```
 pip3 install gmpy2
 ```
-Step 3. Setup Certificate <br>
+Step 3. Setup Certificate <br></br>
 Receive `C0.pem`,`C0.key` from Coordinator ,and move them to `Player-Data/`
 ```
 mv /path/to/file/C0.pem Player-Data/
