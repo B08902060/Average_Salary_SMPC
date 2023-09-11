@@ -115,7 +115,7 @@ Step 2: Install `gmpy2`
 ```
 pip3 install gmpy2
 ```
-Step 3. Setup Certificate
+Step 3. Setup Certificate \n
 Receive `Ci.pem`,`Ci.key`(`i` is the ID of Data provider) from Coordinator ,and move them to `Player-Data/`
 ```
 mv /path/to/file/Ci.pem Player-Data/
@@ -129,7 +129,7 @@ Step 2: Install `gmpy2`
 ```
 pip3 install gmpy2
 ```
-Step 3. Setup Certificate
+Step 3. Setup Certificate\n
 Receive `C0.pem`,`C0.key` from Coordinator ,and move them to `Player-Data/`
 ```
 mv /path/to/file/C0.pem Player-Data/
