@@ -1,4 +1,4 @@
-# Privacy-Preserving Research Data Sharing
+# Privacy-Preserving Statistical Average Salary Calculation
 
 Gender wage gap refers to the disparity in earnings that arises due to gender within the same job positions or similar roles. This phenomenon is prevalent in many countries and across various industries, but the specific extent of the gap can vary based on factors such as region, industry, education level, and job position.
 
@@ -17,7 +17,7 @@ This case study is based on the Boston Women's Workforce Council's use of Secure
 Therefore, the goal is to pursue gender pay equality while safeguarding individuals' privacy, which is why Secure Multi-Party Computation technology is used to conduct the investigation of average gender salaries.
 
 
-![](https://hackmd.io/_uploads/HyebvKpah.png)
+![](https://hackmd.io/uploads/HyebvKpah.png)
 [圖片來源](https://www.mdpi.com/2410-387X/4/3/25)
 
 <p class="text-center">▲ 圖SMPC-2、安全多方運算擬真情境架構圖</p>
