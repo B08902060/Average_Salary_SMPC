@@ -17,10 +17,9 @@ This case study is based on the Boston Women's Workforce Council's use of Secure
 Therefore, the goal is to pursue gender pay equality while safeguarding individuals' privacy, which is why Secure Multi-Party Computation technology is used to conduct the investigation of average gender salaries.
 
 
-![](https://hackmd.io/uploads/HyebvKpah.png)
-[圖片來源](https://www.mdpi.com/2410-387X/4/3/25)
-
+![](https://github.com/B08902060/secure_multiparty_computaion/blob/main/Secret_sharing_externalI:O.png)
 <p class="text-center">▲ 圖SMPC-2、安全多方運算擬真情境架構圖</p>
+
 ## Dataset
 We will generate randomly simulated salary data with the following data fields:
 
@@ -53,8 +52,7 @@ The fundamental operation of Secure Multi-Party Computation (SMPC) involves part
 
 In the current context, each employee is responsible for providing their salary (secret input), so they need to process their salary in a way that cannot be deciphered before handing it over to the deployed SMPC nodes for computation. The detailed process is as illustrated in the diagram below:
 
-![](https://hackmd.io/_uploads/HyebvKpah.png)
-[圖片來源](https://www.mdpi.com/2410-387X/4/3/25)
+![](https://github.com/B08902060/secure_multiparty_computaion/blob/main/Secret_sharing_externalI:O.png)
 
 <p class="text-center">▲ 圖SMPC-2、安全多方運算擬真情境架構圖</p>
 
