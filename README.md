@@ -18,7 +18,6 @@ Therefore, the goal is to pursue gender pay equality while safeguarding individu
 
 
 ![](https://github.com/B08902060/secure_multiparty_computaion/blob/main/Secret_sharing_externalI:O.png)
-<p class="text-center">▲ 圖SMPC-2、安全多方運算擬真情境架構圖</p>
 
 ## Dataset
 We will generate randomly simulated salary data with the following data fields:
@@ -53,8 +52,6 @@ The fundamental operation of Secure Multi-Party Computation (SMPC) involves part
 In the current context, each employee is responsible for providing their salary (secret input), so they need to process their salary in a way that cannot be deciphered before handing it over to the deployed SMPC nodes for computation. The detailed process is as illustrated in the diagram below:
 
 ![](https://github.com/B08902060/secure_multiparty_computaion/blob/main/Secret_sharing_externalI:O.png)
-
-<p class="text-center">▲ 圖SMPC-2、安全多方運算擬真情境架構圖</p>
 
 In this example, we utilize secret sharing techniques to enable employees to transform their own salaries into multiple "shares." This ensures that individual MPC nodes cannot independently decipher a specific employee's salary. After a set period of time, a Stop Provider will send a termination signal to each MPC node. At this point, the MPC nodes can commence secure multi-party computation, ultimately resulting in the publication of the average salaries for each gender.
 
