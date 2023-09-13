@@ -49,13 +49,6 @@ Secure Multi-Party Computation (SMPC) allows for the calculation of employees' a
 
 ## Data Processing
 
-:::info
-請昱維將 [擬真情境 HackMD](https://hackmd.io/tsCygT4XQsyNxlqZlsSgEQ) 的「隱私強化技術運作方式/機制說明」 譯成英文，並參考架構填充至此。
-+ 以一個段落說明擬真情境內各參與角色為何
-+ 列點說明資料處理的每個步驟
-+ 提供 資料處理流程圖
-:::
-
 The fundamental operation of Secure Multi-Party Computation (SMPC) involves participants masking their own secret inputs and subsequently collaboratively calculating a common computational goal.
 
 In the current context, each employee is responsible for providing their salary (secret input), so they need to process their salary in a way that cannot be deciphered before handing it over to the deployed SMPC nodes for computation. The detailed process is as illustrated in the diagram below:
