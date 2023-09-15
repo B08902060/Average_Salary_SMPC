@@ -19,7 +19,7 @@ salary = float(input("Please enter your salary:"))
 gender = int(input("\n1.Male 2.Female 3.Other \nPlease choose your gender:"))
 
 print("\n")
-if gender not in [1,2,3]:
+if gender not in [1, 2, 3]:
     raise ValueError("invalid gender type")
 
 client = Client(ip, computation_node_0_port_num, client_id)
