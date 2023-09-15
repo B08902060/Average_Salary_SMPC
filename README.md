@@ -20,7 +20,7 @@ In the following scenario, we assume that the Department of Labor intends to con
 
 |Role | Who | Work | 
 |:--------: | :--------: | :--------: |   
-|Data Provider| Employee($Client_1,...,Client_n$) | Transform secret inputs into "shares" and hand them over to the computing provider for calculation.  | 
+|Data Provider| Employee($Client_1,...,Client_n$) | Transform secret inputs into "shares" and hand them over to the computing provider for calculation. Here, we assume that each employee is assigned a pre-distributed ID (in practice, we typically integrate this into the identity authentication system, so once authentication is successful, the system can provide the employee's ID).  | 
 |Stop Provider| Department of Labor($Client_0$) | Declare the end of salary collection and commence the computation.  | 
 |Computing Provider| Vendor A($MPC\ node_0,...,MPC\ node_{m-1}$)  | Collect the "shares" from each data provider and use them for computation.  | 
 |Result Obtainer| Vendor A($MPC\ node_0$) | Retrieve the results and share them with the other parties. | 
