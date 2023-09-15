@@ -76,6 +76,7 @@ Step 2. Generate Certificate
 ./Scripts/setup-clients.sh <the_number_of_Data_providers>
 ```
 Step 3. Distribute certificates
+If you don't know how to do it, please check [MP-SPDZ documentation:Client Interface](https://mp-spdz.readthedocs.io/en/latest/client-interface.html).
 
 ### Preparation Stage
 #### MPC nodes
@@ -95,10 +96,9 @@ Step 4. Compile MPC file
 ```
 ./compile.py average_gender_salary.mpc
 ```
-Step 5. Setup Certificate: receive `Pi.pem`,`Pi.key`(`i` is the ID of MPC nodes),and move them to `Player-Data/`
+Step 5. Setup Certificate: receive certificates,and move them to `Player-Data/`
 ```
-mv /path/to/file/Pi.pem Player-Data/
-mv /path/to/file/Pi.key Player-Data/
+mv <certificates> Player-Data/
 ```
 
 #### Data provider
@@ -108,10 +108,9 @@ Step 2: Install `gmpy2`
 ```
 pip3 install gmpy2
 ```
-Step 3. Setup Certificate: receive `Ci.pem`,`Ci.key`(`i` is the ID of Data provider),and move them to `Player-Data/`
+Step 3. Setup Certificate: receive certificates,and move them to `Player-Data/`
 ```
-mv /path/to/file/Ci.pem Player-Data/
-mv /path/to/file/Ci.key Player-Data/
+mv <certificates> Player-Data/
 ```
 
 #### Stop provider 
@@ -121,12 +120,10 @@ Step 2: Install `gmpy2`
 ```
 pip3 install gmpy2
 ```
-Step 3. Setup Certificate: receive `C0.pem`,`C0.key`,and move them to `Player-Data/`
+Step 3. Setup Certificate: Setup Certificate: receive certificates,and move them to `Player-Data/`
 ```
-mv /path/to/file/C0.pem Player-Data/
-mv /path/to/file/C0.key Player-Data/
+mv <certificates> Player-Data/
 ```
-
 
 ### Computation Stage
 Step 1. MPC nodes start MPC protocol.
@@ -139,6 +136,7 @@ Step 2. Data providers connect and sent data(secret input) to MPC nodes.
 ```
 python3 Client/Data_provider/average_salary.py <the_number_of_MPC_node> 14000 <IP_of_MPC_node_0> ... <IP_of_MPC_node_(m-1)>
 ```
+14000 is the port number of $MPC\ node_0$ (that of $MPC\ node_i$ is $14000+i$).
 
 Step 3. When the time is up, Stop provider issues the command to terminate the MPC protocol.
 ```
