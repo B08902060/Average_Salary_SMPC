@@ -39,21 +39,21 @@ def average_gender_salary(number_clients, client_values, client_genders):
         gender_type1 = (client_genders[i] == 1)     # Male
         gender_type2 = (client_genders[i] == 2)     # Female
         gender_type3 = (client_genders[i] == 3)     # Other
-        sum[0] = gender_type1.if_else(sum[0]+client_values[i],sum[0])        
-        sum[1] = gender_type2.if_else(sum[1]+client_values[i],sum[1])        
-        sum[2] = gender_type3.if_else(sum[2]+client_values[i],sum[2])        
-        num_of_gender[0] = gender_type1.if_else(num_of_gender[0]+1,num_of_gender[0])
-        num_of_gender[1] = gender_type2.if_else(num_of_gender[1]+1,num_of_gender[1])
-        num_of_gender[2] = gender_type3.if_else(num_of_gender[2]+1,num_of_gender[2])
+        sum[0] = gender_type1.if_else(sum[0]+client_values[i], sum[0])        
+        sum[1] = gender_type2.if_else(sum[1]+client_values[i], sum[1])        
+        sum[2] = gender_type3.if_else(sum[2]+client_values[i], sum[2])        
+        num_of_gender[0] = gender_type1.if_else(num_of_gender[0]+1, num_of_gender[0])
+        num_of_gender[1] = gender_type2.if_else(num_of_gender[1]+1, num_of_gender[1])
+        num_of_gender[2] = gender_type3.if_else(num_of_gender[2]+1, num_of_gender[2])
     
     average = sfix.Array(3)                         # The average salary provided by each gender.
     @for_range(3)
     def _(i):
         div = (num_of_gender[i] == 0)
-        average[i] = div.if_else(0,sum[i]/num_of_gender[i])
-    print_ln("1.(Male)  sum: %s,number: %s,average: %s",sum[0].reveal(),num_of_gender[0].reveal(),average[0].reveal())
-    print_ln("2.(Female)sum: %s,number: %s,average: %s",sum[1].reveal(),num_of_gender[1].reveal(),average[1].reveal())
-    print_ln("3.(Other) sum: %s,number: %s,average: %s",sum[2].reveal(),num_of_gender[2].reveal(),average[2].reveal())
+        average[i] = div.if_else(0, sum[i]/num_of_gender[i])
+    print_ln("1.(Male)  sum: %s, number: %s, average: %s", sum[0].reveal(), num_of_gender[0].reveal(), average[0].reveal())
+    print_ln("2.(Female)sum: %s, number: %s, average: %s", sum[1].reveal(), num_of_gender[1].reveal(), average[1].reveal())
+    print_ln("3.(Other) sum: %s, number: %s, average: %s", sum[2].reveal(), num_of_gender[2].reveal(), average[2].reveal())
     
 
 def main():
@@ -90,14 +90,14 @@ def main():
             check = (client_id == 0)
             
             # record client input & number of clients
-            client_values[x] = check.if_else(0,client_input(sfix, client_id))
-            client_genders[x] = check.if_else(0,client_input(sint,client_id))
-            now = check.if_else(number_clients,number_clients+1)
+            client_values[x] = check.if_else(0, client_input(sfix, client_id))
+            client_genders[x] = check.if_else(0, client_input(sint, client_id))
+            now = check.if_else(number_clients, number_clients+1)
             number_clients.write(now)
 
             close_connections(client_id)
             
-            return check.if_else(MAX_NUM_CLIENTS,x+1)
+            return check.if_else(MAX_NUM_CLIENTS, x+1)
             
         average_gender_salary(number_clients, client_values, client_genders)
 
