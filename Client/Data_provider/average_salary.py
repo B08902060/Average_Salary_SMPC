@@ -4,10 +4,10 @@ import sys
 
 sys.path.append('.')
 
-from client import *
-from domains import *
+from Client.client import *
+from Client.domains import *
 
-n_computation_nodes = int(sys.argv[1])
+n_computation_nodes = int(sys.argv[1])  #the number of MPC node
 computation_node_0_port_num = int(sys.argv[2])
 ip = []
 for i in range(n_computation_nodes):
@@ -36,5 +36,3 @@ else:
 multiple = 2 ** 16
 client.send_private_inputs([domain(salary * multiple)])
 client.send_private_inputs([domain(gender)])
-
-# print('Average Salary is :',(client.receive_outputs(domain, 1)[0].v % 2 ** 64)/multiple)
