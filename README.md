@@ -76,7 +76,6 @@ Step 2. Generate Certificate
 ./Scripts/setup-clients.sh <the_number_of_Data_providers>
 ```
 Step 3. Distribute certificates
-If you don't know how to do it, please check [MP-SPDZ documentation:Client Interface](https://mp-spdz.readthedocs.io/en/latest/client-interface.html).
 
 ### Preparation Stage
 #### MPC nodes
@@ -96,9 +95,12 @@ Step 4. Compile MPC file
 ```
 ./compile.py average_gender_salary.mpc
 ```
-Step 5. Setup Certificate: receive certificates,and move them to `Player-Data/`
+Step 5. Setup Certificate: receive `Pi.pem`,`Pi.key`(`i` is the ID of MPC nodes),`C*.pem`(all providers' `*.pem`); move them to `Player-Data/`; run `c_rehash <directory>` on its location.
 ```
-mv <certificates> Player-Data/
+mv /path/to/file/Pi.pem Player-Data/
+mv /path/to/file/Pi.key Player-Data/
+mv /path/to/file/C*.pem Player-Data/
+c_rehash Player-Data/
 ```
 
 #### Data provider
@@ -108,9 +110,11 @@ Step 2: Install `gmpy2`
 ```
 pip3 install gmpy2
 ```
-Step 3. Setup Certificate: receive certificates,and move them to `Player-Data/`
+Step 3. Setup Certificate: receive `Ci.pem`,`Ci.key`(`i` is the ID of Data provider),`P*.pem`(all MPC nodes' `*.pem`); move them to `Player-Data/`
 ```
-mv <certificates> Player-Data/
+mv /path/to/file/Ci.pem Player-Data/
+mv /path/to/file/Ci.key Player-Data/
+mv /path/to/file/P*.pem Player-Data/
 ```
 
 #### Stop provider 
@@ -120,9 +124,11 @@ Step 2: Install `gmpy2`
 ```
 pip3 install gmpy2
 ```
-Step 3. Setup Certificate: Setup Certificate: receive certificates,and move them to `Player-Data/`
+Step 3. Setup Certificate: receive `C0.pem`,`C0.key`,`P*.pem`(all MPC nodes' `*.pem`); move them to `Player-Data/`
 ```
-mv <certificates> Player-Data/
+mv /path/to/file/C0.pem Player-Data/
+mv /path/to/file/C0.key Player-Data/
+mv /path/to/file/P*.pem Player-Data/
 ```
 
 ### Computation Stage
