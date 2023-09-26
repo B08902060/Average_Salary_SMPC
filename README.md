@@ -83,7 +83,8 @@ Step 1: Build and install MP-SPDZ using `make -j 8 tldr`. If you don't know how 
 ```
 git clone https://github.com/data61/MP-SPDZ.git
 cd MP-SPDZ
-make -j 8 tldr      //Rapidly construct the necessary files and the available protocol: mascot-party.x.
+make -j 8 tldr      //Rapidly construct the necessary files
+make -j 8 shamir    //build the available protocol: shamir-party.x.
 ```
 Step 2: Clone MPC_node
 
@@ -134,7 +135,7 @@ mv /path/to/file/P*.pem Player-Data/
 ### Computation Stage
 Step 1. MPC nodes start MPC protocol.
 ```
-./mascot-party.x -N <the_number_of_MPC_nodes> -p <ID_of_MPC_nodes> -h <IP_of_MPC_node_0> average_gender_salary
+./shamir-party.x -N <the_number_of_MPC_nodes> -p <ID_of_MPC_nodes> -h <IP_of_MPC_node_0> -pn <PortNumber_of_MPC_node_0> average_gender_salary
 ```
 If you don't know how to do it or meet any issue, please check [MP-SPDZ documentation](https://mp-spdz.readthedocs.io/en/latest/).
 
