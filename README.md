@@ -86,6 +86,12 @@ cd MP-SPDZ
 make -j 8 tldr      //Rapidly construct the necessary files
 make -j 8 shamir    //build the available protocol: shamir-party.x.
 ```
+In this case, we opt for a semi-honest protocol, so we have employed the Shamir protocol. If we were to use a malicious-secure protocol (MASCOT), then the computation time in the context of three computing parties (i.e., locally) would compare as follows:
+|Protocol | Time     | 
+|:--------: | :--------: |
+|shamir| 0.047469 |
+|mascot| 7.18371 |
+
 Step 2: Clone MPC_node
 
 Step 3: Copy and move `average_gender_salary.mpc` to `Program/Source/`
