@@ -149,7 +149,7 @@ Step 2. Data providers connect and sent data(secret input) to MPC nodes.
 ```
 python3 Client/Data_provider/average_salary.py <the_number_of_MPC_node> 14000 <IP_of_MPC_node_0> ... <IP_of_MPC_node_(m-1)>
 ```
-14000 is the port number of $MPC\ node_0$ (that of $MPC\ node_i$ is $14000+i$). You can adjust it in `MPC_node/average_gender_salary.mpc`
+14000 is the listening port number of $MPC\ node_0$ (that of $MPC\ node_i$ is $14000+i$). You can adjust it in `MPC_node/average_gender_salary.mpc`
 
 Step 3. When the time is up, Stop provider issues the command to terminate the MPC protocol.
 ```
