@@ -76,6 +76,9 @@ Step 2. Generate Certificate
 ./Scripts/setup-clients.sh <the_number_of_Data_providers>
 ```
 Step 3. Distribute certificates
+Send `Pi.pem`,`Pi.key`(`i` is the ID of MPC nodes),`C*.pem`(all providers' `*.pem`) to each MPC node.
+Send `Ci.pem`,`Ci.key`(`i` is the ID of Data provider),`P*.pem`(all MPC nodes' `*.pem`) to each Data Provider.
+Send `C0.pem`,`C0.key`,`P*.pem`(all MPC nodes' `*.pem`) to Stop Provider.
 
 ### Preparation Stage
 #### MPC nodes
@@ -93,10 +96,12 @@ In this case, we opt for a semi-honest protocol, so we have employed the Shamir 
 |mascot| 7.18371 |
 
 Step 2: Clone MPC_node
-
+```
+git clone https://github.com/B08902060/secure_multiparty_computaion.git
+```
 Step 3: Copy and move `average_gender_salary.mpc` to `Program/Source/`
 ```
-cp MPC_node/average_gender_salary.mpc Program/Source/
+cp secure_multiparty_computaion/MPC_node/average_gender_salary.mpc Program/Source/
 ```
 Step 4. Compile MPC file
 ```
@@ -112,7 +117,10 @@ c_rehash Player-Data/
 
 #### Data provider
 Step 1: Clone Client/Data_provider
-
+```
+git clone https://github.com/B08902060/secure_multiparty_computaion.git
+cd secure_multiparty_computaion/
+```
 Step 2: Install `gmpy2`
 ```
 pip3 install gmpy2
@@ -126,7 +134,10 @@ mv /path/to/file/P*.pem Player-Data/
 
 #### Stop provider 
 Step 1: Clone Client/Stop_provider
-
+```
+git clone https://github.com/B08902060/secure_multiparty_computaion.git
+cd secure_multiparty_computaion/
+```
 Step 2: Install `gmpy2`
 ```
 pip3 install gmpy2
@@ -157,7 +168,7 @@ python3 Client/Stop_provider/average_salary_finish.py <the_number_of_MPC_node> 1
 ```
 
 Step 4. MPC node 0 will output the result.
-
+MPC node 0 shares the result with Data providers.
 
 
 ## Reference
